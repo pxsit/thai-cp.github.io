@@ -1,8 +1,8 @@
 import re
-import yaml
 from pathlib import Path
 from markdown.extensions import Extension as MDXExtension
 from markdown.preprocessors import Preprocessor as MDXPreprocessor
+from .utils import parse_frontmatter
 
 
 class ProblemInfoExtension(MDXExtension):
@@ -33,6 +33,8 @@ class ProblemInfoPreprocessor(MDXPreprocessor):
                 html = self.build_info(problem_id)
                 if html is not None:
                     new_lines.append(html)
+                else:
+                    new_lines.append(line)
             else:
                 new_lines.append(line)
         return new_lines
@@ -44,21 +46,7 @@ class ProblemInfoPreprocessor(MDXPreprocessor):
         if not file_path.exists():
             return None
 
-        with open(file_path, encoding="utf-8") as f:
-            lines = f.readlines()
-
-        if not (lines and lines[0].strip() == "---"):
-            return None
-
-        meta_lines = []
-        for line in lines[1:]:
-            if line.strip() == "---":
-                break
-            meta_lines.append(line)
-        try:
-            meta = yaml.safe_load("".join(meta_lines)) or {}
-        except yaml.YAMLError:
-            meta = {}
+        meta = parse_frontmatter(file_path)
 
         source = meta.get("source")
         difficulty = meta.get("difficulty", "?") or "?"

@@ -22,6 +22,8 @@ class ResourcesTagPreprocessor(MDXPreprocessor):
                 html = self.build_table(triples)
                 if html is not None:
                     new_lines.append(html)
+                else:
+                    new_lines.append(line)
             else:
                 new_lines.append(line)
         return new_lines
