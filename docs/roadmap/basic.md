@@ -11,7 +11,7 @@ title: พื้นฐาน (Basic)
 ## การเขียนโปรแกรมเบื้องต้น
 
 - [บทนำ](../beginner/general/intro.md)
-- [วิธีการรันโปรแกรม](../beginner/general/run-code.md.md)
+- [วิธีการรันโปรแกรม](../beginner/general/run-code.md)
 
 <!-- ### การเขียนโปรแกรมภาษา C
 
