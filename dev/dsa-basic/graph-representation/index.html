@@ -1949,7 +1949,7 @@
 <p>Example: Unweighted Graph</p>
 </blockquote>
 <p>กราฟในภาพดังกล่าวสามารถ represent ได้เป็น { {0,1}, {0,2}, {0,3}, {1,2}, {1,4}, {2,4}, {2,5}, {3,5} }
-<img src="/assets/graph-representation/edge-list-unweighted.jpg" alt="" width="800"></p>
+<img src="../../assets/graph-representation/edge-list-unweighted.jpg" alt="" width="800"></p>
 <ul>
 <li>ถ้าจะเก็บ weighted graph ให้ ใช้เป็น <code>vector&lt;pair&lt;pair&lt;int, int&gt;, int&gt;&gt;</code> (ใช้ struct หรือ tuple ก็ได้ แล้วแต่ถนัด)
   ซึ่ง pair เก็บ <code>{{เลข vertex ด้านหนึ่งของ edge, เลข vertex อีกด้านของ edge}, weight ของ edge นั้น}</code></li>
@@ -1958,7 +1958,7 @@
 <p>Example: Weighted Graph</p>
 </blockquote>
 <p>กราฟในภาพดังกล่าวสามารถ represent ได้เป็น { {{0,1},4}, {{0,2},2}, {{0,3},3}, {{1,2},1}, {{1,4},3}, {{2,4},5}, {{2,5},3}, {{3,5},6} }
-<img src="/assets/graph-representation/edge-list-weighted.jpg" alt="" width="800"></p>
+<img src="../../assets/graph-representation/edge-list-weighted.jpg" alt="" width="800"></p>
 <ul>
 <li>สําหรับ Edge List ถ้าเก็บ directed graph จําเป็นต้องสนใจลำดับของ vertex ใน pair ด้วย</li>
 </ul>
@@ -1973,7 +1973,7 @@
 </ul>
 <blockquote>
 <p>Example:
-<img src="/assets/graph-representation/adjacency-matrix-weighted.jpg" alt="" width="800"></p>
+<img src="../../assets/graph-representation/adjacency-matrix-weighted.jpg" alt="" width="800"></p>
 </blockquote>
 <ul>
 <li>ถ้าจะเก็บ unweighted Graph ให้ใส่ค่าเป็น 1 เมื่อมี edge และใส่ 0 ถ้าไม่มี edge (ใช้ <code>bool</code> เพื่อใช้ค่า true กับ false แทนได้เหมือนกัน)</li>
@@ -1988,14 +1988,14 @@
 </ul>
 <blockquote>
 <p>Example: Unweighted Graph
-<img src="/assets/graph-representation/adjacency-list-unweighted.jpg" alt="" width="800"></p>
+<img src="../../assets/graph-representation/adjacency-list-unweighted.jpg" alt="" width="800"></p>
 </blockquote>
 <ul>
 <li>ถ้าจะเก็บ weighted graph ให้ใช้เป็น <code>vector&lt;pair&lt;int, int&gt;&gt;</code> แทน ซึ่งแต่ละ pair เก็บ <code>{เลข vertex ที่ไปหา, weight ของ edge นั้น}</code></li>
 </ul>
 <blockquote>
 <p>Example: Weighted Graph
-<img src="/assets/graph-representation/adjacency-list-weighted.jpg" alt="" width="800"></p>
+<img src="../../assets/graph-representation/adjacency-list-weighted.jpg" alt="" width="800"></p>
 </blockquote>
 <ul>
 <li>ถ้าจะเก็บ Undirected Graph ให้ใส่ edge เดียวกันไปทั้ง 2 ด้าน<br />
