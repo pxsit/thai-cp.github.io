@@ -74,7 +74,7 @@ Time Complexity : $\mathcal{O}(n + m)$
 * DFS สามารถ ทำให้ graph ใดๆ เป็น rooted tree ตามทางที่ search ไปได้ด้วย และ tree นั้นเรียกว่า DFS tree
 
 > Example: DFS บน Graph ทั่วไป
-<img src="/assets/graph-traversal/dfs-recursive.jpg" alt = "" width="800">
+<img src="../../assets/graph-traversal/dfs-recursive.jpg" alt = "" width="800">
 
 ### DFS บน tree โดยการเขียน Recursive Function
 
@@ -117,7 +117,7 @@ int main(){
 Time Complexity : $\mathcal{O}(n + m)$
 
 > Example: DFS บน Tree
-<img src="/assets/graph-traversal/dfs-recursive-tree.jpg" alt="" width="800">
+<img src="../../assets/graph-traversal/dfs-recursive-tree.jpg" alt="" width="800">
 
 ### DFS โดยใช้ Stack
 
@@ -305,7 +305,7 @@ Time Complexity : $\mathcal{O}(n + m)$
 * BFS สามารถ ทำให้ graph ใดๆ เป็น Rooted Tree ตามทางที่ search ไปได้ด้วย Tree นั้นเรียกว่า BFS Tree
 
 > Example: BFS บน Graph ทั่วไป
-<img src="/assets/graph-traversal/bfs-queue.jpg" alt="" width="800">
+<img src="../../assets/graph-traversal/bfs-queue.jpg" alt="" width="800">
 
 ### BFS บนกราฟที่ไม่เชื่อมต่อกันทั้งหมด
 

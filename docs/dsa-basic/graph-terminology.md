@@ -8,7 +8,7 @@ level:
 
 กราฟ (graph) คือโครงสร้างข้อมูลที่ประกอบไปด้วยเซตของจุดยอด (vertex) และเซตของเส้นเชื่อม (edge) โดยหนึ่งเส้นเชื่อมจะเชื่อมระหว่างจุดยอดสองจุด และแสดงความสัมพันธ์ระหว่างจุดยอดเหล่านั้น
 
-<img src="/assets/graph-terminology/graph.jpg" alt="" width="300">
+<img src="../../assets/graph-terminology/graph.jpg" alt="" width="300">
 
 ภาพด้านบนเป็นหนึ่งในตัวอย่างของกราฟ ที่ประกอบไปด้วย 6 จุดยอด และ 8 เส้นเชื่อม
 
@@ -26,7 +26,7 @@ level:
 
 * คือ กราฟที่เส้นเชื่อมไม่มีระบุทิศทางไว้ หรือนั่นก็คือ เส้นเชื่อมทุกเส้นถูกเชื่อมสามารถใช้เดินทั้งขาไปและขากลับได้เสมอ
 
-<img src="/assets/graph-terminology/directed-graph-undirected-graph.jpg" alt="" width="700">
+<img src="../../assets/graph-terminology/directed-graph-undirected-graph.jpg" alt="" width="700">
 
 ### กราฟถ่วงน้ำหนัก (weighted graph)
 
@@ -36,7 +36,7 @@ level:
 
 * คือ กราฟที่เส้นเชื่อมไม่มีระบุน้ำหนักไว้ ซึ่งในบางกรณีอาจมองว่าทุกเส้นเชื่อมมีน้ำหนักเท่ากับ 1 ก็ได้เช่นกัน
 
-<img src="/assets/graph-terminology/weighted-graph-unweighted-graph.jpg" alt="" width="700">
+<img src="../../assets/graph-terminology/weighted-graph-unweighted-graph.jpg" alt="" width="700">
 
 ### กราฟอย่างง่าย (simple graph)
 
@@ -46,7 +46,7 @@ level:
 
 * คือ กราฟที่อาจมีเส้นเชื่อมที่เชื่อมระหว่างจุดยอดเดียวกัน (อาจมี self loop) และอาจมีคู่ของจุดยอดที่มีเส้นเชื่อมมากกว่าหนึ่งเส้น (อาจมี multiple edge)
 
-<img src="/assets/graph-terminology/simple-graph-multigraph.jpg" alt="" width="700">
+<img src="../../assets/graph-terminology/simple-graph-multigraph.jpg" alt="" width="700">
 
 ### วิถี (path)
 
@@ -60,7 +60,7 @@ level:
 
 * คือ path ที่มีจุดยอดเริ่มต้นและจุดยอดสิ้นสุดเป็นจุดเดียวกัน
 
-<img src="/assets/graph-terminology/path-cycle.jpg" alt="" width="700">
+<img src="../../assets/graph-terminology/path-cycle.jpg" alt="" width="700">
 
 ### ดีกรี (degree)
 
@@ -72,13 +72,13 @@ level:
 
     * ดีกรีออก (outdegree) คือจำนวนเส้นเชื่อมที่ชี้ออกจากจุดยอดนั้น
 
-<img src="/assets/graph-terminology/degree.jpg" alt="" width="700">
+<img src="../../assets/graph-terminology/degree.jpg" alt="" width="700">
 
 ### ส่วนประกอบที่เชื่อมกัน (connected component)
 
 * คือ เซตของจุดยอดในกราฟแบบไม่มีทิศทาง ที่ทุกคู่ของจุดยอดในเซตมี path เชื่อมกันเสมอ แต่ไม่มีจุดยอดใดๆที่อยู่นอกเซต ที่เชื่อมกับจุดยอดใดๆในเซตด้วย path ได้เลย
 
-<img src="/assets/graph-terminology/connected-components.jpg" alt="" width="400">
+<img src="../../assets/graph-terminology/connected-components.jpg" alt="" width="400">
 
 ### กราฟเชื่อมโยง (connected graph)
 
@@ -88,14 +88,14 @@ level:
 
 * คือ กราฟแบบมีทิศทางที่ไม่มี directed cycle อยู่เลย
 
-<img src="/assets/graph-terminology/dag.jpg" alt="" width="400">
+<img src="../../assets/graph-terminology/dag.jpg" alt="" width="400">
 
 ### กราฟบริบูรณ์ (complete graph)
 
 * คือ กราฟที่ทุกคู่ของจุดยอดมีเส้นเชื่อมกันโดยตรงเสมอ
 * กราฟบริบูรณ์ที่มี `n` จุดยอด จะมีเส้นเชื่อมทั้งหมด `n(n-1)/2` เส้น
 
-<img src="/assets/graph-terminology/complete-graph.jpg" alt="" width="300">
+<img src="../../assets/graph-terminology/complete-graph.jpg" alt="" width="300">
 
 ### ต้นไม้ (tree)
 
@@ -107,4 +107,4 @@ level:
 * คือ กราฟที่มีต้นไม้อยู่หลายต้น หรือกล่าวได้อีกแบบว่า เป็นกราฟที่ทุก connected component คือกราฟต้นไม้
 * ป่าที่มีจุดยอดรวมทั้งหมด `n` จุด และมีต้นไม้อยู่ `m` ต้น จะมีเส้นเชื่อมรวมทั้งหมด `n-m` เส้น
 
-<img src="/assets/graph-terminology/tree-forest.jpg" alt="" width="800">
+<img src="../../assets/graph-terminology/tree-forest.jpg" alt="" width="800">
