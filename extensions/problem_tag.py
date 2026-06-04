@@ -1,8 +1,8 @@
 import re
-import yaml
 from pathlib import Path
 from markdown.extensions import Extension as MDXExtension
 from markdown.preprocessors import Preprocessor as MDXPreprocessor
+from .utils import parse_frontmatter
 
 
 class ProblemTagExtension(MDXExtension):
@@ -33,6 +33,8 @@ class ProblemTagPreprocessor(MDXPreprocessor):
                 html = self.build_table(problem_ids)
                 if html is not None:
                     new_lines.append(html)
+                else:
+                    new_lines.append(line)
             else:
                 new_lines.append(line)
         return new_lines
@@ -45,24 +47,12 @@ class ProblemTagPreprocessor(MDXPreprocessor):
             title, source, difficulty, link = pid, None, "?", None
 
             if file_path.exists():
-                with open(file_path, encoding="utf-8") as f:
-                    lines = f.readlines()
+                meta = parse_frontmatter(file_path)
 
-                if lines and lines[0].strip() == "---":
-                    meta_lines = []
-                    for line in lines[1:]:
-                        if line.strip() == "---":
-                            break
-                        meta_lines.append(line)
-                    try:
-                        meta = yaml.safe_load("".join(meta_lines)) or {}
-                    except yaml.YAMLError:
-                        meta = {}
-
-                    title = meta.get("title", pid) or pid
-                    source = meta.get("source")
-                    difficulty = meta.get("difficulty", "?") or "?"
-                    link = meta.get("link")
+                title = meta.get("title", pid) or pid
+                source = meta.get("source")
+                difficulty = meta.get("difficulty", "?") or "?"
+                link = meta.get("link")
 
             problem_cell = (
                 f'<a href="{link}" target="_blank" rel="noopener noreferrer">{title}</a>'

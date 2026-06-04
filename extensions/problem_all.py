@@ -1,9 +1,9 @@
 import re
-import yaml
 import os
 from pathlib import Path
 from markdown.extensions import Extension as MDXExtension
 from markdown.preprocessors import Preprocessor as MDXPreprocessor
+from .utils import parse_frontmatter
 
 _NAT_SPLIT_RE = re.compile(r"(\d+)")
 
@@ -40,7 +40,10 @@ class ProblemAllPreprocessor(MDXPreprocessor):
             match = self.tag.search(line)
             if match:
                 html = self.build_card()
-                new_lines.append(html)
+                if html is not None:
+                    new_lines.append(html)
+                else:
+                    new_lines.append(line)
             else:
                 new_lines.append(line)
         return new_lines
@@ -49,38 +52,20 @@ class ProblemAllPreprocessor(MDXPreprocessor):
         rows = []
 
         problems = []
-        for f in os.listdir(self.problems_dir):
-            if not f.endswith(".md"):
-                continue
-            pid, _ = os.path.splitext(f)
+        for file_path in self.problems_dir.glob("*.md"):
+            pid = file_path.stem
             if pid == "index":
                 continue
 
-            file_path = self.problems_dir / f"{pid}.md"
             title, source, difficulty, link = pid, None, "?", None
 
             if file_path.exists():
-                try:
-                    with open(file_path, encoding="utf-8") as fobj:
-                        lines = fobj.readlines()
-                except OSError:
-                    lines = []
+                meta = parse_frontmatter(file_path)
 
-                if lines and lines[0].strip() == "---":
-                    meta_lines = []
-                    for line in lines[1:]:
-                        if line.strip() == "---":
-                            break
-                        meta_lines.append(line)
-                    try:
-                        meta = yaml.safe_load("".join(meta_lines)) or {}
-                    except yaml.YAMLError:
-                        meta = {}
-
-                    title = meta.get("title", pid) or pid
-                    source = meta.get("source")
-                    difficulty = meta.get("difficulty", "?") or "?"
-                    link = meta.get("link")
+                title = meta.get("title", pid) or pid
+                source = meta.get("source")
+                difficulty = meta.get("difficulty", "?") or "?"
+                link = meta.get("link")
 
             problems.append(
                 {

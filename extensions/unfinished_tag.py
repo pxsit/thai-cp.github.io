@@ -18,8 +18,10 @@ class UnfinishedTagPreprocessor(MDXPreprocessor):
             match = self.tag.search(line)
             if match:
                 html = self.build_tag()
-                if html:
+                if html is not None:
                     new_lines.append(html)
+                else:
+                    new_lines.append(line)
             else:
                 new_lines.append(line)
         return new_lines
