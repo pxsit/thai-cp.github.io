@@ -71,7 +71,7 @@ nav:
        - Linked List: dsa-basic/linked-list.md
        - Stack: dsa-basic/stack.md
        - Queue: dsa-basic/queue.md
-       - Graph Terminology: dsa-basic/graph-terminology.md
+       - Introduction to Graph: dsa-basic/graph-terminology.md
        - Graph Representaion: dsa-basic/graph-representation.md
        - Graph Traversal: dsa-basic/graph-traversal.md
   - โจทย์: problems/index.md
