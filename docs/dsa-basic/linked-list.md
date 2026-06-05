@@ -4,7 +4,7 @@ author: Black Cat & Neighborhood's Cat
 level:
 ---
 
-<img src="/assets/linked_list.jpg" alt="">
+<img src="../../assets/linked_list.jpg" alt="">
 
 Linked list คือ ระบบการจัดเก็บข้อมูลรูปแบบหนึ่ง ที่นำข้อมูลมาเรียงต่อกันไปเป็น list ได้อย่างไม่สิ้นสุด ซึ่งจะประกอบด้วย node ที่เป็น struct หลาย ๆ node มาเชื่อมเข้าด้วยกันด้วย pointer ที่อยู่ใน struct แต่ละตัวอีกทีเป็นห่วงโซ่ต่อเนื่องกัน
 
@@ -20,7 +20,7 @@ Linked list คือ ระบบการจัดเก็บข้อมู�
 
 มีขั้นตอนดังนี้
 
-<img src="/assets/linked_list2.jpg" alt="">
+<img src="../../assets/linked_list2.jpg" alt="">
 
 1. สร้าง node ที่จะนำมาต่อกันเป็น list
 

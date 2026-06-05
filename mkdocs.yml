@@ -1,5 +1,5 @@
 site_name: Thailand Competitive Programming Wiki
-site_url: https://thai-cp.github.io/
+site_url: https://thai-cp.github.io/dev/
 
 nav:
   - Home: index.md
@@ -41,7 +41,7 @@ nav:
      - แหล่งเรียนรู้: general/resources.md
   - การเขียนโปรแกรมเบื้องต้น:
      - บทนำ: beginner/general/intro.md
-     - วิธีการรันโปรแกรม: beginner/general/run-code.md.md
+     - วิธีการรันโปรแกรม: beginner/general/run-code.md
      - การเขียนโปรแกรมภาษา C:
        - Hello, World!: beginner/c/hello-world.md
        - ตัวแปร ชนิดข้อมูล และตัวดำเนินการ: beginner/c/variable.md
